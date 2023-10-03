@@ -10,3 +10,6 @@ Steps:
    ```C:\Users\{your_username}\AppData\Roaming\npm\node_modules\pm2\bin```
 3. Make sure to restart the VM.
 4. Now let's look at the azure deployment and release pipelines -
+5. Follow the build pipeline from the repo https://github.com/mail4hafij/nextjs_azure_devops_pipeline/tree/master
+   
+TODO... need to add release pipeline
