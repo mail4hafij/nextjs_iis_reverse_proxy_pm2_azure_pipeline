@@ -11,8 +11,9 @@ Steps:
 3. Make sure to restart the VM.
 4. Now let's look at the azure deployment and release pipelines -
 5. Follow the build pipeline from the repo https://github.com/mail4hafij/nextjs_azure_devops_pipeline
-6. Create a deployment group which points to the windows VM in preperation for the release pipeline in azure.
-7. In the release pipeline after the Deployment group job setup, add Command Line Script task with the following scripts
+6. The build pipeline will create an artifact (let's say) which is ```next.zip```.
+7. Create a deployment group which points to the windows VM in preperation for the release pipeline in azure.
+8. In the release pipeline after the Deployment group job setup, add Command Line Script task with the following scripts
 
 ```
 call pm2 delete all
