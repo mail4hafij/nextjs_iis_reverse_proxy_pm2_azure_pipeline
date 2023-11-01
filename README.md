@@ -19,7 +19,11 @@ Deploy Nextjs App in windows IIS (reverse proxy) using pm2 node service through 
 6. Follow the build pipeline from the repo https://github.com/mail4hafij/nextjs_azure_devops_pipeline
 7. The build pipeline will create an artifact (let's say) which is ```next.zip```.
 8. Create a deployment group which points to the windows VM in preperation for the release pipeline in azure.
-9. In the release pipeline after the Deployment group job setup, add Command Line Script task with the following scripts
+9. In the release pipeline add two tasks 
+    
+   - ```Deployment group job``` - where we mention the deployment group which is the same as our iis server.
+   
+   - ```Command Line Script``` - use the following script. In the advance settings, make sure to be in the same directory where the artifact is downloaded.
 
 ```
 call pm2 delete all
@@ -28,6 +32,5 @@ cd C:\\Next
 tar -xvf next.zip
 call pm2 start ecosystem.config.js 
 ```
-**In the advance settings, make sure to be in the same directory where the artifact is downloaded.**
 
 Enjoy!
