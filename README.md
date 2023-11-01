@@ -22,6 +22,6 @@ cd C:\\Next
 tar -xvf next.zip
 call pm2 start ecosystem.config.js 
 ```
-**In the advance settings, make sure to be in the same directory where the artifact gets downloaded.**
+**In the advance settings, make sure to be in the same directory where the artifact is downloaded.**
 
 Enjoy!
