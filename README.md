@@ -7,7 +7,7 @@ Deploy Nextjs App in windows IIS (reverse proxy) using pm2 node service through 
 3. Install pm2 globally. Also need to add the following path to system environment path variable so that, deployment group from azure pipeline can run pm2 commands.
    ```C:\Users\{your_username}\AppData\Roaming\npm\node_modules\pm2\bin```
 4. Make sure to restart the VM.
-5. Create a folder ```Next``` in the C: drive where the node/nextjs application will be deployed and run.
+5. Create a folder ```Next``` in the C: drive. This is where we will run our node or nextjs application.
    
 ### Azure Build and Release pipelines   
 6. Follow the build pipeline from the repo https://github.com/mail4hafij/nextjs_azure_devops_pipeline
