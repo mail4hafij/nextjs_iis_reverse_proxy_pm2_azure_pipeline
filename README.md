@@ -2,7 +2,7 @@
 Deploy Nextjs App in windows IIS (reverse proxy) using pm2 node service through Azure devops pipeline.
 
 ### VM setup
-1. A windows VM with IIS setup   - make sure to install URL Rewrite https://www.iis.net/downloads/microsoft/url-rewrite
+1. A windows VM with IIS setup   - make sure to install URL Rewrite https://www.iis.net/downloads/microsoft/url-rewrite and Application Request Routing https://iis-umbraco.azurewebsites.net/downloads/microsoft/application-request-routing
 2. Setup a reverse proxy rule in the ```URL Rewrite``` of a blank site to localhost:3000 (whatever port we want our nextjs/node application to run)
 3. Install pm2 globally.
 
