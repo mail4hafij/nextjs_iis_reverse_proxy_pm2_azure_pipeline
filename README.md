@@ -4,12 +4,7 @@ Deploy Nextjs App in windows IIS (reverse proxy) using pm2 node service through 
 ### VM setup
 1. A windows VM with IIS setup   - make sure to install URL Rewrite https://www.iis.net/downloads/microsoft/url-rewrite and Application Request Routing https://iis-umbraco.azurewebsites.net/downloads/microsoft/application-request-routing
 2. Setup a reverse proxy rule in the ```URL Rewrite``` of a blank site to localhost:3000 (whatever port we want our nextjs/node application to run)
-3. In IIS:
-    Click on the server -> Application Request Routing -> Server Proxy Settings
-    * Uncheck Enable disk cache
-    * Query string support (Do not cache)
-
-4. Install pm2 globally.
+3. Install pm2 globally.
 
    ```npm install pm2 -g```
    
@@ -17,14 +12,14 @@ Deploy Nextjs App in windows IIS (reverse proxy) using pm2 node service through 
    
    ```C:\Users\{your_username}\AppData\Roaming\npm\node_modules\pm2\bin```
    
-5. Make sure to restart the VM.
-6. Create a folder ```Next``` in the C: drive. This is where we will run our node or nextjs application.
+4. Make sure to restart the VM.
+5. Create a folder ```Next``` in the C: drive. This is where we will run our node or nextjs application.
    
 ### Azure Build and Release pipelines   
-7. Follow the build pipeline from the repo https://github.com/mail4hafij/nextjs_azure_devops_pipeline
-8. The build pipeline will create an artifact (let's say) which is ```next.zip```.
-9. Create a deployment group which points to the windows VM in preperation for the release pipeline in azure.
-10. In the release pipeline add two tasks 
+6. Follow the build pipeline from the repo https://github.com/mail4hafij/nextjs_azure_devops_pipeline
+7. The build pipeline will create an artifact (let's say) which is ```next.zip```.
+8. Create a deployment group which points to the windows VM in preperation for the release pipeline in azure.
+9. In the release pipeline add two tasks 
     
    - ```Deployment group job``` - where we mention the deployment group which is the same as our iis server.
    
