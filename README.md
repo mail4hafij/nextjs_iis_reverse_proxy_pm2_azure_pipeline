@@ -16,6 +16,9 @@ Deploy Nextjs App in windows IIS (reverse proxy) using pm2 node service through 
    ```
    C:\Users\{your_username}\.pm2
    ```
+   ```
+   C:\Users\Administrator\AppData\Roaming\npm
+   ```
    
 5. Make sure to restart the VM.
 6. Create a folder ```Next``` in the C: drive. This is where we will run our node or nextjs application.
